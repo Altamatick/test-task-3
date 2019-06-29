@@ -1,0 +1,10 @@
+{
+    "name": "altamatick/test-task-3",
+    "description": "",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": { 
+            "test\\": "" 
+        }
+    }
+}
