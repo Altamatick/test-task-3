@@ -10,6 +10,10 @@ class ForbiddenWordChecker extends BaseChecker
     public function check(string $value) : bool
     {
         foreach ($this->filters as $word) {
+            if ($this->caseSensitive === false) {
+                $value = strtolower($value);
+                $word = strtolower($word);
+            }
             if (strpos($value, $word) !== false) {
                 $this->addError($word);
             }
