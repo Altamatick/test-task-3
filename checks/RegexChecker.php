@@ -7,6 +7,7 @@ class RegexChecker extends BaseChecker
 
     public function check(string $value) : bool
     {
+        $this->clearErrors();
         foreach ($this->filters as $regex) {
             if (preg_match_all('/'.$regex.'/', $value, $matches)) {
                 $this->addError($matches[0][0]);

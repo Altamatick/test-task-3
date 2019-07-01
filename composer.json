@@ -6,5 +6,8 @@
         "psr-4": { 
             "test\\": "" 
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.0"
     }
 }

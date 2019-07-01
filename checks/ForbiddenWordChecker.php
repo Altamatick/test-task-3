@@ -9,6 +9,7 @@ class ForbiddenWordChecker extends BaseChecker
 
     public function check(string $value) : bool
     {
+        $this->clearErrors();
         foreach ($this->filters as $word) {
             if ($this->caseSensitive === false) {
                 $value = strtolower($value);

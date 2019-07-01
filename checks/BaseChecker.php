@@ -27,5 +27,10 @@ abstract class BaseChecker implements CheckInterface
     {
         return count($this->errors) !== 0;
     }
+
+    public function clearErrors() : void
+    {
+        $this->errors = [];
+    }
 }
 

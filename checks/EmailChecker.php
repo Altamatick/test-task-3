@@ -7,6 +7,7 @@ class EmailChecker extends BaseChecker
 
     public function check(string $value) : bool
     {
+        $this->clearErrors();
         if (preg_match_all($this->regex, $value, $matches)) {
             foreach ($matches as $v) {
                 $this->addError($v[0]);

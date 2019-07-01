@@ -1,7 +1,7 @@
 <?php
 namespace test;
 
-class Checker implements ChecksControlInterface
+class ComplexChecker implements ChecksControlInterface
 {
     private $filters = [];
     private $errors = [];
@@ -27,6 +27,7 @@ class Checker implements ChecksControlInterface
 
     public function check(string $text) : bool
     {
+        $this->errors = [];
         foreach ($this->filters as $filter) {
             if ($filter->check($text) === false) {
                 foreach ($filter->getErrors() as $error) {

@@ -11,6 +11,8 @@ interface CheckInterface
 
     public function hasErrors() : bool;
 
+    public function clearErrors() : void;
+
     public static function getName() : string;
 }
 
