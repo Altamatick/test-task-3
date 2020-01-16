@@ -8,6 +8,7 @@
         }
     },
     "require": {
-        "codeception/codeception": "^3.0"
+        "codeception/codeception": "^3.0",
+        "php": ">=7.1.0"
     }
 }
